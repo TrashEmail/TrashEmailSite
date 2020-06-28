@@ -15,4 +15,5 @@ document.getElementById("numberOfUsers").innerText = adminStats.numberOfUsers;
 document.getElementById("numberOfEmailsRegistered").innerText = adminStats.numberOfEmailsRegistered;
 document.getElementById("numberOfEmailsRegisteredToday").innerText = adminStats.emailIdsCreatedToday;
 document.getElementById("version").innerText = adminStats.version;
-
+document.getElementById("totalNumberOfUsers").innerText = adminStats.totalNumberOfUsers;
+document.getElementById("numberOfEmailsProcessed").innerText = adminStats.numberOfEmailsProcessed;
