@@ -1,6 +1,6 @@
 
 var xmlhttp = new XMLHttpRequest();
-var url = "https://telegram.trashemail.in/admin/stats";
+var url = "https://bot.trashemail.in/stats";
 var adminStats;
 
 xmlhttp.onreadystatechange = function () {
@@ -11,9 +11,14 @@ xmlhttp.onreadystatechange = function () {
 xmlhttp.open("GET", url, false);
 xmlhttp.send();
 
-document.getElementById("numberOfUsers").innerText = adminStats.numberOfUsers;
-document.getElementById("numberOfEmailsRegistered").innerText = adminStats.numberOfEmailsRegistered;
+console.log(adminStats)
+
+document.getElementById("numberOfActiveUsers").innerText = adminStats.connectorStats[0].activeUsers;
+document.getElementById("numberOfEmailsRegistered").innerText = adminStats.connectorStats[0].totalNumberOfEmailIds;
+
 document.getElementById("numberOfEmailsRegisteredToday").innerText = adminStats.emailIdsCreatedToday;
 document.getElementById("version").innerText = adminStats.version;
 document.getElementById("totalNumberOfUsers").innerText = adminStats.totalNumberOfUsers;
 document.getElementById("numberOfEmailsProcessed").innerText = adminStats.numberOfEmailsProcessed;
+document.getElementById("totalNumberOfUsers").innerText = adminStats.connectorStats[0].totalNumberOfUsers;
+
