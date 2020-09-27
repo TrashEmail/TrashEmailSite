@@ -1,6 +1,6 @@
 
 var xmlhttp = new XMLHttpRequest();
-var url = "https://bot.trashemail.in/stats";
+var url = "https://sawx2b7151.execute-api.us-east-2.amazonaws.com/default/teml-stats";
 var adminStats;
 
 xmlhttp.onreadystatechange = function () {
